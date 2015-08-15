@@ -6,9 +6,15 @@
 * npm install -g karma
 * npm install
 
-## To start the server
+## To run the app without watch
+npm test
+
+See the steps in the script "test" in package.json.
+
+## To run the app with watch
 ```
 npm start
+open localhost:8080
 ```
 
 This does the following:
@@ -17,6 +23,9 @@ This does the following:
 * serves files
 * watches for changes
 * does live reload
+
+This doesn't refresh when the HTML is modified.
+How can you make it do that?
 
 ## To run the tests:
 

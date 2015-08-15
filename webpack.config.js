@@ -8,20 +8,13 @@
 var path = require('path');
 
 module.exports = {
-  entry: './test/math-test.js',
-  /*
-  entry: {
-    //app: ['webpack/hot/dev-server', './src/main.js']
-    app: ['./src/main.js']
-  },
-  */
+  entry: './src/main.js',
   eslint: {
     configFile: './.eslintrc'
   },
   output: {
-    path: './test', //__dirname,
-    filename: 'spec.js', //'bundle.js'
-    publicPath: '/test',
+    path: '.',
+    filename: 'bundle.js'
   },
   module: {
     preLoaders: [
@@ -41,16 +34,6 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
-      /*
-      {
-        test: path.join(__dirname, 'src'),
-        loader: 'babel-loader'
-      },
-      {
-        test: path.join(__dirname, 'test'),
-        loader: 'babel-loader'
-      },
-      */
       {
         test: /\.less$/,
         loader: 'style-loader!css-loader!less-loader'
@@ -58,10 +41,6 @@ module.exports = {
 
       //TODO: There doesn't seem to be a loader for lesslint yet.
       //TODO: However, there is a csslint loader.
-
-      //TODO: Integrate running of Jasmine tests.
-      //TODO: There doesn't seem to be a loader for jasmine yet.
-      //TODO: However, there is a mocha loader.
     ]
   }
 };

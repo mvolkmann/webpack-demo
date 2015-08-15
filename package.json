@@ -10,7 +10,8 @@
     "testWDS": "./node_modules/.bin/webpack-dev-server 'mocha!./test/*.js' --output-filename testBundle.js",
     "testW": "webpack test/*.js --output-filename test-bundle.js --target node; mocha test-bundle.js",
     "testM": "mocha!./test/*.js --output-filename test-bundle.js --target node; open index.html",
-    "test": "karma start --single-run --browsers PhantomJS"
+    "testK": "karma start --single-run --browsers PhantomJS",
+    "test": "cd test; webpack; open index.html"
   },
   "author": "R. Mark Volkmann",
   "license": "MIT",

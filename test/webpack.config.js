@@ -1,14 +1,11 @@
-var path = require('path');
-
 module.exports = {
   entry: './math-test.js',
   eslint: {
     configFile: '../.eslintrc'
   },
   output: {
-    path: '.', //'./test',
-    filename: 'spec.js',
-    publicPath: '.' //'/test',
+    path: '.',
+    filename: 'bundle.js',
   },
   module: {
     preLoaders: [

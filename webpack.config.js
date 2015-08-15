@@ -8,17 +8,20 @@
 var path = require('path');
 
 module.exports = {
-  //entry: './src/main.js',
+  entry: './test/math-test.js',
+  /*
   entry: {
     //app: ['webpack/hot/dev-server', './src/main.js']
     app: ['./src/main.js']
   },
+  */
   eslint: {
     configFile: './.eslintrc'
   },
   output: {
-    path: __dirname,
-    filename: 'bundle.js'
+    path: './test', //__dirname,
+    filename: 'spec.js', //'bundle.js'
+    publicPath: '/test',
   },
   module: {
     preLoaders: [
@@ -34,6 +37,12 @@ module.exports = {
     loaders: [
       // How can I listen for HTML changes and trigger a reload?
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      /*
+      {
         test: path.join(__dirname, 'src'),
         loader: 'babel-loader'
       },
@@ -41,6 +50,7 @@ module.exports = {
         test: path.join(__dirname, 'test'),
         loader: 'babel-loader'
       },
+      */
       {
         test: /\.less$/,
         loader: 'style-loader!css-loader!less-loader'

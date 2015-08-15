@@ -19,6 +19,14 @@ This does the following:
 * does live reload
 
 ## To run the tests:
+
+```
+cd test
+webpack
+open index.html
+```
+
+The following isn't working yet:
 ```
 npm test
 ```

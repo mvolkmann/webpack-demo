@@ -19,4 +19,6 @@ This does the following:
 * does live reload
 
 ## To run the tests:
+```
 npm test
+```

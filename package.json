@@ -7,9 +7,9 @@
     "build": "PRODUCTION=1 webpack",
     "clean": "rm bundle.js",
     "start": "./node_modules/.bin/webpack-dev-server --inline --content-base ./",
-    "testOld": "./node_modules/.bin/webpack-dev-server 'mocha!./test/*.js' --output-filename test.js",
-    "testX": "webpack test/*.js --output-filename test-bundle.js --target node; mocha test-bundle.js",
-    "testY": "mocha!./test/*.js --output-filename test-bundle.js --target node; open index.html",
+    "testWDS": "./node_modules/.bin/webpack-dev-server 'mocha!./test/*.js' --output-filename testBundle.js",
+    "testW": "webpack test/*.js --output-filename test-bundle.js --target node; mocha test-bundle.js",
+    "testM": "mocha!./test/*.js --output-filename test-bundle.js --target node; open index.html",
     "test": "karma start --single-run --browsers PhantomJS"
   },
   "author": "R. Mark Volkmann",

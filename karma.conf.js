@@ -73,6 +73,7 @@ module.exports = function (config) {
         }]*/
       },
       resolve: {
+        extensions: ["", ".js"],
         modulesDirectories: [
           '',
           'node_modules',

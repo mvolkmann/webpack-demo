@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 module.exports = function (config) {
   config.set({
-    basepath: '.',
+    basepath: '',
 
     browsers: ['PhantomJS'],
 
@@ -13,6 +13,8 @@ module.exports = function (config) {
       dir: 'build/coverage/'
     },
     */
+
+    exclude: [],
 
     files: [
       './node_modules/phantomjs-polyfill/bind-polyfill.js',
@@ -34,12 +36,12 @@ module.exports = function (config) {
 
     plugins: [
       require('karma-webpack'),
-      require('karma-mocha'),
-      require('karma-chai'),
-      require('karma-phantomjs-launcher'),
-      require('karma-spec-reporter')
-      //require('karma-coverage'),
-      //require('istanbul-instrumenter-loader'),
+      'karma-mocha',
+      'karma-chai',
+      'karma-phantomjs-launcher',
+      'karma-spec-reporter'
+      //'karma-coverage',
+      //'istanbul-instrumenter-loader',
     ],
 
     reporters: [

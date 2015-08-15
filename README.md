@@ -27,7 +27,7 @@ This does the following:
 This doesn't refresh when the HTML is modified.
 How can you make it do that?
 
-## To run the tests:
+## To run the Jasmine tests:
 
 ```
 cd test
@@ -39,3 +39,7 @@ The following isn't working yet:
 ```
 npm test
 ```
+
+## To run the Karma tests:
+
+I still need to figure out how to get this to work.

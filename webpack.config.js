@@ -5,8 +5,6 @@
 // instead of one bundle.js file so refreshes are faster
 // in development for large projects.
 
-var path = require('path');
-
 module.exports = {
   entry: './src/main.js',
   eslint: {

@@ -1,12 +1,12 @@
-= This demonstrates using webpack with Babel and Karma.
+# This demonstrates using webpack with Babel and Karma.
 
-== Setup steps
+## Setup steps
 
 * npm install -g webpack
 * npm install -g karma
 * npm install
 
-== To start the server
+## To start the server
 ```
 npm start
 ```
@@ -18,5 +18,5 @@ This does the following:
 * watches for changes
 * does live reload
 
-== To run the tests:
+## To run the tests:
 npm test
